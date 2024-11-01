@@ -1,0 +1,27 @@
+---
+vSRX1:
+  netmiko:
+    device_type: juniper_junos
+    host: 192.168.188.131
+    username: root
+    password: toor123
+  local_asn: 101
+  neighbors:
+    - interface: ge-0/0/0
+      interface_description: "to vSRX2"
+      asn: 104
+      peer_ip: 192.168.1.1
+      local_ip: 192.168.1.0
+vSRX2:
+  netmiko:
+    device_type: juniper_junos
+    host: 192.168.188.132
+    username: root
+    password: toor123
+  local_asn: 104
+  neighbors:
+    - interface: ge-0/0/0
+      interface_description: "to vSRX1"
+      asn: 101
+      peer_ip: 192.168.1.0
+      local_ip: 192.168.1.1

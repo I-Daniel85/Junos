@@ -1,0 +1,10 @@
+/.venv/
+.idea
+test.py
+show chassis hardware.json
+show chassis hardware.txt
+show chassis hardware.xml
+show system information.json
+show system information.txt
+show system information.xml
+Test
